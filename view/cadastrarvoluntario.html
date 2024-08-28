@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLP Manager - Cadastrar Voluntário</title>
+    <link rel="stylesheet" href="cadastrarvoluntario.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Voluntário</h1>
+        <div class="header-right">
+            <div class="icon" id="notificacao" title="Notificação">🔔</div>
+            <div class="icon" id="configuracoes" title="Configurações">⚙️</div>
+            <div class="icon" id="perfil" title="Perfil">👤</div>
+        </div>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="#voluntarios" class="active">Voluntários</a></li>
+            <li><a href="#termo">Termo de Adesão</a></li>
+            <li><a href="#oficinas">Oficinas</a></li>
+            <li><a href="#atividades">Atividades</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <form>
+            <h2>Informações Pessoais</h2>
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <h2>Informações de Contato</h2>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <h2>Endereço</h2>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+            </div>
+            <div>
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" required>
+            </div>
+            <div>
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+            <div>
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+            </div>
+            <div>
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+            <div>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+            <div>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                </select>
+            </div>
+            <h2>Informações Acadêmicas</h2>
+            <div>
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" name="curso" required>
+            </div>
+            <div>
+                <label for="periodo">Período:</label>
+                <select id="periodo" name="periodo" required>
+                    <option value="">Selecione</option>
+                    <option value="1">1º Período</option>
+                    <option value="2">2º Período</option>
+                </select>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
