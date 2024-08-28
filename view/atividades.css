@@ -1,0 +1,112 @@
+/* estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* cabeçalho */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #d0d0d0;
+}
+
+/* aside */
+aside {
+    background-color: #004080;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 15px;
+}
+
+aside ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+aside ul li a.active {
+    background-color: #003366;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* conteúdo principal */
+main {
+    margin-left: 220px; /* Espaço para o aside */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+thead th {
+    background-color: #004080;
+    color: white;
+}
+
+.input-data {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.periodo {
+    display: flex;
+    justify-content: space-between;
+}
