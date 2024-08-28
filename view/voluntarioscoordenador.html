@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Voluntários</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="voluntarioscoordenador.css">
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <div class="menu-lateral">
+        <h2>ELLP Manager</h2>
+        <div class="menu-item" onclick="mostrarVoluntarios()">Voluntários</div>
+        <div class="menu-item" onclick="mostrarTermo()">Termo de Adesão</div>
+        <div class="menu-item" onclick="mostrarOficinas()">Oficinas</div>
+        <div class="menu-item" onclick="mostrarAtividades()">Atividades</div>
+    </div>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>Gerenciador de Voluntários</h1>
+            <div class="icons">
+                <span class="icon" onclick="notificacao()">
+                    <img src="notificacao.png" alt="Notificações">
+                </span>
+                <span class="icon" onclick="configuracao()">
+                    <img src="configuracao.png" alt="Configurações">
+                </span>
+                <span class="icon">
+                    <img src="perfil.png" alt="Perfil do Usuário">
+                </span>
+            </div>
+        </div>
+        <!-- Campo de Busca e Tabela -->
+        <input type="text" id="search" placeholder="Procurar..." onkeyup="filtrarVoluntarios()">
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox-column"><input type="checkbox" id="selectAll" onclick="selecionarTodos()"></th>
+                    <th>Nome</th>
+                    <th>RA</th>
+                    <th>Data</th>
+                    <th>Email</th>
+                    <th>Cidade</th>
+                    <th>Contato</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="voluntarios">
+                <tr>
+                    <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
+                    <td>Renan M</td>
+                    <td>#2211220</td>
+                    <td>01/08/2024</td>
+                    <td>renanm@gmail.com</td>
+                    <td>Cornélio Procópio</td>
+                    <td class="actions">
+                        <button onclick="contato('Renan M')">📞</button>
+                        <button onclick="email('Renan M')">✉️</button>
+                    </td>
+                    <td><button onclick="opcoes('Renan M')">...</button></td>
+                </tr>
+                <!-- Outras linhas podem ser adicionadas aqui -->
+            </tbody>
+        </table>
+        
+        <!-- Indices de Paginação -->
+        <div class="pagination">
+            <button class="selected" onclick="pagina(1)">1</button>
+            <button onclick="pagina(2)">2</button>
+            <button onclick="pagina(3)">3</button>
+        </div>
+    </div>
+
+    <script>
+        function mostrarVoluntarios() {
+            alert("Exibindo Voluntários");
+        }
+
+        function mostrarTermo() {
+            alert("Exibindo Termo de Adesão");
+        }
+
+        function mostrarOficinas() {
+            alert("Exibindo Oficinas");
+        }
+
+        function mostrarAtividades() {
+            alert("Exibindo Atividades");
+        }
+
+        function novoVoluntario() {
+            alert("Adicione um novo voluntário!");
+        }
+
+        function selecionarTodos() {
+            const selectAllCheckbox = document.getElementById('selectAll');
+            const checkboxes = document.getElementsByClassName('select-item');
+            for (const checkbox of checkboxes) {
+                checkbox.checked = selectAllCheckbox.checked;
+            }
+        }
+
+        function filtrarVoluntarios() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const rows = document.getElementById('voluntarios').getElementsByTagName('tr');
+
+            for (const row of rows) {
+                const name = row.getElementsByTagName('td')[1].textContent.toLowerCase();
+                if (name.includes(input)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+        function contato(nome) {
+            alert("Ligando para " + nome);
+        }
+
+        function email(nome) {
+            alert("Enviando email para " + nome);
+        }
+
+        function opcoes(nome) {
+            alert("Opções para " + nome);
+        }
+
+        function notificacao() {
+            alert("Você tem novas notificações!");
+        }
+
+        function configuracao() {
+            alert("Abrindo configurações do usuário!");
+        }
+
+        function pagina(numero) {
+            const botoes = document.querySelectorAll('.pagination button');
+            botoes.forEach(botao => botao.classList.remove('selected'));
+            botoes[numero - 1].classList.add('selected');
+        }
+    </script>
+</body>
+</html>
