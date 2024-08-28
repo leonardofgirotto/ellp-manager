@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLP Manager Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/view/images/ELLP logo horizontal 1.png" alt="">
+        </div>
+        <div class="auth-buttons">
+            <button>Registrar</button>
+            <button>Entrar</button>
+        </div>
+    </header> 
+    <div class="container">
+        <div class="form">
+            <form id="register-form">
+                <div class="tab">
+                    <button type="button" class="tablink active" onclick="openTab(event, 'voluntario')">Login Voluntário</button>
+                    <button type="button" class="tablink" onclick="openTab(event, 'coordenador')">Login Coordenador</button>
+                </div>
+                <div id="voluntario" class="tabcontent">
+                    <input type="text" id="ra" placeholder="Registro de Aluno (RA)"> 
+                    <input type="password" id="senha" placeholder="Senha">   
+                    <button type="submit">Entrar</button>
+                </div>
+                <div id="coordenador" class="tabcontent" style="display:none;">
+                    <input type="email" id="email" placeholder="Email Institucional">
+                    <input type="password" id="senha-coordenador" placeholder="Senha">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+        <section class="background">
+            <img src="images/ELLP background 1.png" alt="">
+        </section>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
