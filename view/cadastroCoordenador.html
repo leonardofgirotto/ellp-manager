@@ -26,7 +26,7 @@
 
                 <div id="voluntario" class="tabcontent">
                     <input type="text" id="nome" placeholder="Nome" required>
-                    <input type="date" id="nascimento" placeholder="Data de Nascimento" required>
+                    <input type="date" id="nascimento" placeholder="Data de nascimento" required>
                     <input type="text" id="cpf" placeholder="CPF" required>
                     <input type="text" id="nacionalidade" placeholder="Nacionalidade" required>
                     <input type="text" id="endereco" placeholder="Endereço" required>
@@ -38,20 +38,32 @@
                     <input type="text" id="ra" placeholder="Registro de Aluno (RA)" required>
                     <input type="text" id="curso" placeholder="Curso" required>
                     <button type="submit">Próximo</button>
-                </div>
+                </div>                
 
                 <div id="coordenador" class="tabcontent" style="display:none;">
                     <input type="text" id="nome-coordenador" placeholder="Nome" required>
-                    <input type="date" id="nascimento-coordenador" placeholder="Data de Nascimento" required>
                     <input type="text" id="cpf-coordenador" placeholder="CPF" required>
-                    <input type="text" id="nacionalidade-coordenador" placeholder="Nacionalidade" required>
-                    <input type="text" id="endereco-coordenador" placeholder="Endereço" required>
-                    <input type="text" id="cidade-coordenador" placeholder="Cidade" required>
-                    <input type="text" id="estado-coordenador" placeholder="Estado" required>
-                    <input type="text" id="instituicao" placeholder="Instituição" required>
-                    <input type="text" id="departamento" placeholder="Departamento" required>
-                    <button type="submit">Próximo</button>
+                    <input type="text" id="nacionalidade-coordenador" placeholder="Departamento" required>
+                    <input type="text" id="endereco-coordenador" placeholder="Telefone" required>
+                    <input type="text" id="cidade-coordenador" placeholder="E-mail Institucional" required>
+                    <input type="text" id="estado-coordenador" placeholder="Senha" required>
+                    <button type="submit">Concluir</button>
                 </div>
+            </form>
+        </div>
+        <div id="form-2" class="form" style="display: none;">
+            <form>
+                <input type="text" id="periodo" placeholder="Período" required>
+                <input type="text" id="telefone" placeholder="Telefone" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+        
+                <label>Status de estudante da UTFPR</label>
+                <input type="radio" id="estudanteSim" name="status" value="sim">Sim
+                <input type="radio" id="estudanteNao" name="status" value="nao">Não
+        
+                <button id="back-btn">Voltar</button>
+                <button type="submit">Concluir</button>
             </form>
         </div>
         <section class="background">

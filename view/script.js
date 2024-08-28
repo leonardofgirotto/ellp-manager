@@ -1,18 +1,3 @@
-const nextBtn = document.getElementById('next-btn');
-const backBtn = document.getElementById('back-btn');
-const form1 = document.getElementById('form-1');
-const form2 = document.getElementById('form-2');
-
-nextBtn.addEventListener('click', () => {
-    form1.classList.add('hidden');
-    form2.classList.remove('hidden');
-});
-
-backBtn.addEventListener('click', () => {
-    form2.classList.add('hidden');
-    form1.classList.remove('hidden');
-});
-
 // Função para alternar entre as abas
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -28,6 +13,32 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Exibe a aba "Registrar Voluntário" por padrão
-document.getElementById("voluntario").style.display = "block";
+document.addEventListener("DOMContentLoaded", () => {
+    // Referências aos elementos do formulário
+    const nextBtn = document.querySelector('#voluntario button[type="submit"]'); // Botão "Próximo" na aba Voluntário
+    const backBtn = document.getElementById('back-btn'); // Botão "Voltar" na segunda tela
+    const form1 = document.getElementById('form-1'); // Primeira tela de cadastro
+    const form2 = document.getElementById('form-2'); // Segunda tela de cadastro
 
+    // Certificar que form1 esteja visível e form2 escondido inicialmente
+    form1.style.display = 'block';  // Garantir que form1 esteja visível inicialmente
+    form2.style.display = 'none';   // Garantir que form2 esteja oculto inicialmente
+
+    // Evento de clique no botão "Próximo"
+    nextBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Impede o envio do formulário
+
+        // Oculta o primeiro formulário e exibe o segundo formulário
+        form1.style.display = 'none';
+        form2.style.display = 'block';
+    });
+
+    // Evento de clique no botão "Voltar"
+    backBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Impede o comportamento padrão
+
+        // Oculta o segundo formulário e exibe o primeiro formulário
+        form2.style.display = 'none';
+        form1.style.display = 'block';
+    });
+});
