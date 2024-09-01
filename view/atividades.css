@@ -1,14 +1,19 @@
-/* estilos globais */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-/* cabeçalho */
+body {
+    background-color: #ffffff;
+}
+
 header {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -33,20 +38,26 @@ header {
 }
 
 .icon:hover {
-    background-color: #d0d0d0;
+    background-color: #004A7B;
+    color: #ffffff;
 }
 
-/* aside */
+.logo img{
+    width: 250px;
+    margin-bottom: 50px;
+    /*margin-right: 10px;*/
+}
+
 aside {
-    background-color: #004080;
-    color: #fff;
-    width: 200px;
+    background-color: #007BCC;
+    color: #ffffff;
+    width: 300px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);*/
 }
 
 aside ul {
@@ -60,32 +71,32 @@ aside ul li {
 }
 
 aside ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 aside ul li a.active {
-    background-color: #003366;
+    background-color: #ffffff;
+    color: #00004D;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
-/* conteúdo principal */
 main {
-    margin-left: 220px; /* Espaço para o aside */
+    margin-left: 300px; /* Espaço para o aside */
     padding: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: center;
 }
 
@@ -94,7 +105,7 @@ th {
 }
 
 thead th {
-    background-color: #004080;
+    background-color: #2BA7E2;
     color: white;
 }
 
@@ -106,7 +117,19 @@ thead th {
     margin-bottom: 10px;
 }
 
-.periodo {
+/*.periodo {
     display: flex;
     justify-content: space-between;
+}*/
+
+input[type="date"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
