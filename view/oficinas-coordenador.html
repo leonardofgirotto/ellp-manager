@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLP Manager - Oficinas</title>
+    <link rel="stylesheet" href="oficinas-coordenador.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="ELLP Manager">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Voluntários</a></li>
+                    <li><a href="#">Termo de Adesão</a></li>
+                    <li class="active"><a href="#">Oficinas</a></li>
+                    <li><a href="#">Atividades</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="header">
+                <h1>Oficinas</h1>
+                <div class="search">
+                    <input type="text" placeholder="Procurar">
+                </div>
+                <div class="user-info">
+                    <span>Antonio</span>
+                    <div class="user-avatar"></div>
+                </div>
+            </header>
+            <section class="calendar-section">
+                <div class="calendar-header">
+                    <h2>Calendário</h2>
+                    <div class="calendar-controls">
+                        <select name="month">
+                            <option value="Augusto">Agosto</option>
+                        </select>
+                        <select name="year">
+                            <option value="2024">2024</option>
+                        </select>
+                        <button class="new-workshop">+ Nova Oficina</button>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <!-- Calendar grid with days -->
+                    <div class="day empty"></div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8</div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                    <div class="day highlight-orange">
+                        12
+                        <div class="workshop-badge">7+</div>
+                    </div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                    <div class="day highlight-purple">
+                        19
+                        <div class="workshop-badge">7+</div>
+                    </div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                    <div class="day">24</div>
+                    <div class="day">25</div>
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                </div>
+            </section>
+            <aside class="upcoming-workshops">
+                <h3>Oficinas Próximas</h3>
+                <div class="workshop">
+                    <h4>Oficina 1</h4>
+                    <p>12/08/2024</p>
+                    <p>09:00 - 10:00</p>
+                </div>
+                <div class="workshop">
+                    <h4>Oficina 2</h4>
+                    <p>12/08/2024</p>
+                    <p>09:00 - 10:00</p>
+                </div>
+                <div class="workshop">
+                    <h4>Oficina 3</h4>
+                    <p>12/08/2024</p>
+                    <p>09:00 - 10:00</p>
+                </div>
+                <div class="workshop">
+                    <h4>Oficina 4</h4>
+                    <p>12/08/2024</p>
+                    <p>09:00 - 10:00</p>
+                </div>
+                <button class="show-more">Mostrar mais</button>
+            </aside>
+        </main>
+    </div>
+    <!-- Adicione isto no final do corpo (antes de </body>) -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <h2>Nova Oficina</h2>
+            <form id="new-workshop-form">
+                <label for="workshop-name">Nome da Oficina:</label>
+                <input type="text" id="workshop-name" required>
+
+                <label for="workshop-date">Data:</label>
+                <input type="date" id="workshop-date" required>
+
+                <label for="workshop-time">Horário:</label>
+                <input type="time" id="workshop-time" required>
+
+                <label for="workshop-duration">Duração (horas):</label>
+                <input type="number" id="workshop-duration" min="1" max="8" required>
+
+                <button type="submit">Adicionar Oficina</button>
+            </form>
+            <button id="close-modal">Fechar</button>
+        </div>
+    </div>
+
+</body>
+</html>
