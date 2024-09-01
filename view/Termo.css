@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #F2F2FC;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar-left {
+    width: 300px;
+    background-color: #0054D6;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+
+}
+
+nav ul li {
+    margin-bottom: 30px;
+   
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.active a {
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 25px;
+    color: #00004d;
+    width: 303px;
+    clip-path: polygon(0 0, 92.5% 0, 92.5% 100%, 0 100%);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-right: 220px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    background-color: #0054D6;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    right: 95px;
+    top: 30px;
+}
+
+.user-role {
+    font-size: 16px;
+    color: #555;
+    position: absolute;
+    right: 95px;
+    top: 52px;
+}
+
+.settings {
+    display: flex;
+    gap: 20px;
+    border: none;
+}
+
+.settings-btn, .bell-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.settings-btn img{
+    width: 55px;
+    height: 57px;
+    position: absolute;
+    right: 190px;
+    top: 22px;
+}
+
+.bell-btn img{
+    width: 55px;
+    height: 55px;
+    margin-top: 3px;
+}
+
+.main-content h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    color: #00004D;
+    position: absolute;
+    top: 30px;
+}
+
+.data-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 36px;
+    margin-right: 100px;
+}
+
+.dados {
+    width: 60%;
+}
+
+.dados p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.termo-adesao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.termo-adesao button {
+    padding: 10px 20px;
+    border: 2px solid #0054D6;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #0054D6;
+    text-align: center;
+}
+
+.sidebar-right {
+    width: 315px;
+    background-color: #FAFAFA;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 120px; /* Adjusted to create space for the header */
+    bottom: 0; /* Adjusted to not take the full height */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.oficinas-section {
+    margin-top: 20px;
+}
+
+.oficinas-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.oficinas-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.oficinas-list li {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.oficina p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.show-more-btn {
+    background-color: #0054D6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
