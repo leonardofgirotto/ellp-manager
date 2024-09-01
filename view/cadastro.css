@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body, html {
     height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #007BCC; /* Cor azul para todos os elementos */
+    background-color: #007BCC; 
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007BCC; /* Cor azul mais escura para o header */
+    background-color: #007BCC; 
     padding: 20px;
     position: fixed;
     width: 100%;
@@ -22,51 +25,104 @@ header {
     z-index: 1000;
 }
 
-/*header .logo {
-    display: flex;
-    align-items: center;
-}*/
-
 header .logo img {
     width: 300px;
     margin-right: 10px;
 }
 
-.auth-buttons{
+.auth-buttons {
     display: flex;
     padding-right: 50px;
-
 }
 
-.auth-buttons button {
-    background-color: white;
-    color: #0056b3;
+.registrar{
+    background-color: #004A7B;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
-    font-weight: bolder;
+    font-weight: 500;
+    display: flex;
+    font-size: 16px;
+}
+
+.registrar i{
+    padding-right: 10px;
+}
+
+.registrar a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.entrar{
+    background-color: white;
+    color: #00004D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.entrar a{
+    color: #00004D;
+    text-decoration: none;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: calc(100% - 100px); /* Considera o header */
-    padding-top: 200px; /* Espaço para o header */
+    height: calc(100% - 80px);  
+    padding-top: 200px; 
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form {
-    flex: 0 0 25%;
+    flex: 0 0 30%;
     padding: 40px;
-    color: white;
-    margin-left: 15%;
+    margin-left: 20px;
+    text-align: center;
 }
 
-.form h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
+.status{
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.status label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #797979;
+}
+
+.status .radio-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status input[type="radio"]{
+    margin-right: 2px;
+    accent-color: #00004D;
+}
+
+.status .radio-group label{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
 }
 
 label {
@@ -75,48 +131,39 @@ label {
     font-size: 16px;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+input[type="estado"],
 select#istate {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #797979;
+    outline: none;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[type="estado"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-}
-
-button {
-    background-color: #ffffff;
-    color: #0056b3;
+.tab {
     border: none;
     padding: 10px;
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     margin-top: 10px;
-}
-
-.radio-group {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
 }
 
-input[type="radio"] {
-    margin-right: 5px;
+.tab button{
+    color: #00004D;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .hidden {
@@ -125,47 +172,71 @@ input[type="radio"] {
 
 .background {
     background-color: #007BCC;
-    flex: 0 0 60%; /* A imagem de fundo ocupa 80% da largura do container */
+    flex: 0 0 40%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .background img {
-    /*max-width: 100%;
-    max-height: 100%;*/
-    width: 740px;
-    height: 700px;
+    width: 100%;
+    height: auto;
+    max-width: 700px;
     background-size: cover;
 }
 
 .tablink {
     background-color: #ffffff;
     border: none;
-    color: #004494;
+    color: #00004D;
     padding: 14px 20px;
     cursor: pointer;
     border-radius: 5px;
     margin-right: 5px;
     font-weight: bold;
+    width: 100%;
 }
 
 .tablink.active {
-    background-color: #004494;
+    background-color: #004A7B;
     color: #ffffff;
 }
 
-.tabcontent{
+.tabcontent {
     margin-top: 15px;
 }
 
-.tabcontent button{
-    font-weight: bolder;
+.tabcontent button {
+    background-color: #ffffff;
+    color: #00004D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 600;
     font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.tab{
-    display: flex;
+.tabcontent button:hover{
+    background-color: #004A7B;
+    color: #ffffff;
 }
 
+.buttons{
+    background-color: #ffffff;
+    color: #00004D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;    
+}
 
+.buttons:hover {
+    background-color: #004A7B;
+    color: #ffffff;
+}
