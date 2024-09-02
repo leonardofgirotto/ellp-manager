@@ -134,14 +134,79 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
 }
-.sidebar-right { /* menu lateal direita*/
-    width: 20%;
-    background-color: #FAFAFA;
+
+.sidebar-right {
+    width: 315px;
+    background-color: none;
     padding: 20px;
-    position: fixed;
+    position: absolute;
     right: 0;
-    top: 100px; /* Adjusted to create space for the header */
-    bottom: 0; /* Adjusted to not take the full height */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    top: 80px; 
+    bottom: 0; 
+    box-shadow: none;
     border-radius: 12px;
+}
+
+.oficinas-section {
+    margin-top: 20px;
+}
+
+.oficinas-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.oficinas-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+}
+
+.oficinas-list li {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.oficinas-list li#h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #00004D;
+}
+
+.oficinas-list li#cor1{
+border-left: 15px solid #007BCC;
+}
+
+.oficinas-list li#cor2{
+    border-left: 15px solid orange;
+}
+
+.oficinas-list li#cor3{
+    border-left: 15px solid yellow;
+}
+
+.oficinas-list li#cor4{
+    border-left: 15px solid #00004d;
+}
+
+.oficina p {
+    margin-bottom: 5px;
+    font-size: 17px;
+    color: #555;
+}
+
+.show-more-btn {
+    background-color: #007BCC;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
 }

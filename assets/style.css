@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    background-color: blue;
+}
+
+section#side-bar-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 700px;
+    width: 300px;
+    background: url('images/side-bar-left.png') no-repeat;
+}
+
+div#botoes-laterais {
+    position: relative;
+    top: 150px;
+    left: 10px;
+    width: 300px;
+}
+
+section#side-bar-left div#botoes-laterais button {
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.463);
+}
+
+section#side-bar-left div#botoes-laterais button {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section#side-bar-left div#botoes-laterais button a {
+    text-decoration: none;
+    color: #00004D;
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    background-color: #00004D;
+}
+
+section#side-bar-left div#botoes-laterais button:hover a {
+    color: white;
+}
+
+section#side-bar-left div#botoes-laterais button:hover i {
+    color: white;
+}
+
+section#side-bar-left div#botoes-laterais button i {
+    margin-bottom: 10px;
+}
+
+section#side-bar-left div#botoes-laterais button i:hover {
+    color: white;
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    transform: scale(1.05);
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    transition: all 0.3s ease;
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    cursor: pointer;
+}
+
+section#side-bar-left div#botoes-laterais button:active {
+    background-color: #00004D;
+    color: white;
+}
+
+section#conteudo-central {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    right: 0;
+    bottom: 0;
+  
+    height: 700px;
+    width: 1235px;
+}

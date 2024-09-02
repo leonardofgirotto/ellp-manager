@@ -19,15 +19,18 @@
         </div>
     </header>
     <aside>
-        <div class="logo">
-            <img src="/view/images/ELLP logo horizontal 1.png" alt="Logo ELLP Manager">
+        <div class="sidebar-left">
+            <div class="logo">
+                <img src="../images/ELLP logo horizontal 1.png" alt="ELLP Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li class="btn"><a href="#"><i class="fa-solid fa-user-graduate"></i>Perfil</a></li>
+                    <li class="active"><a href="#"><i class="fa-regular fa-envelope"></i>Termo de Adesão</a></li>
+                    <li class="btn"><a href="#"><i class="fa-regular fa-calendar"></i>Oficinas</a></li>
+                </ul>
+            </nav>
         </div>
-        <ul>
-            <li><a href="#">Voluntários</a></li>
-            <li><a href="#">Termo de Adesão</a></li>
-            <li><a href="#">Oficinas</a></li>
-            <li><a href="#" class="active">Atividades</a></li>
-        </ul>
     </aside>
     <main>
         <table>
@@ -38,38 +41,42 @@
                     <th>Fim</th>
                     <th colspan="12">Mês</th>
                 </tr>
-                <!-- aqui-->
                 <div class="sidebar-right">
                     <div class="oficinas-section">
-                        <h2>Oficinas Próximas</h2>
                         <ul class="oficinas-list">
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 1</strong></p>
+                            <li id="h1"> 
+                                <div>
+                                    <p>Oficinas Próximas</p>
+                                </div>
+                            <li id="cor1">
+                                <div>
+                                    <p><strong>Robótica</strong></p>
                                     <p>12/08/2024</p>
                                     <p>09:00 - 10:00</p>
                                     <p>Professor</p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 2</strong></p>
+                            <li id="cor2">
+                                <div>
+                                    <p><strong>Informática
+                                    </strong></p>
                                     <p>12/08/2024</p>
                                     <p>09:00 - 10:00</p>
                                     <p>Professor</p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 3</strong></p>
+                            <li id="cor3">
+                                <div>
+                                    <p><strong>App Inventor
+                                    </strong></p>
                                     <p>12/08/2024</p>
                                     <p>09:00 - 10:00</p>
                                     <p>Professor</p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 4</strong></p>
+                            <li id="cor4">
+                                <div class="oficina4">
+                                    <p><strong>Lego</strong></p>
                                     <p>12/08/2024</p>
                                     <p>09:00 - 10:00</p>
                                     <p>Professor</p>
@@ -79,9 +86,8 @@
                         <button class="show-more-btn">Mostrar mais</button>
                     </div>
                 </div>
+                </div>
             </div>
-                <!-- aqui-->
-
                 <tr>
                     <th></th>
                     <th><input type="date" id="inicio"></th>
@@ -115,12 +121,6 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
-                        <!--<div class="periodo">
-                            <label for="inicio">Início:</label>
-                            <input type="date" id="inicio" class="input-data">
-                            <label for="fim">Fim:</label>
-                            <input type="date" id="fim" class="input-data">
-                        </div>-->
                 </tr>
                 <tr>
                     <td>2</td>

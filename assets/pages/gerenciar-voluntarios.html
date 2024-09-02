@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Voluntários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link para o CSS externo -->
     <link rel="stylesheet" href="../css/gerenciar-voluntarios.css">
 </head>
 <body>
     <!-- Menu Lateral -->
     <div class="menu-lateral">
-        <h2>ELLP Manager</h2>
-        <div class="menu-item" onclick="mostrarVoluntarios()">Voluntários</div>
-        <div class="menu-item" onclick="mostrarTermo()">Termo de Adesão</div>
-        <div class="menu-item" onclick="mostrarOficinas()">Oficinas</div>
-        <div class="menu-item" onclick="mostrarAtividades()">Atividades</div>
+        <div class="logo">
+            <img src="../images/ELLP logo horizontal 1.png" alt="ELLP Logo">
+        </div>
+        <div class="menu-item" onclick="mostrarVoluntarios()"><i class="fa-solid fa-user-graduate"></i>Voluntários</div>
+        <div class="menu-item" onclick="mostrarTermo()"><i class="fa-regular fa-envelope"></i>Termo de Adesão</div>
+        <div class="menu-item" onclick="mostrarOficinas()"> <i class="fa-regular fa-calendar"></i>Oficinas</div>
+        <div class="menu-item" onclick="mostrarAtividades()"> <i class="fa-solid fa-chart-line"></i>Atividades</div>
     </div>
 
     <div class="container">
         <!-- Cabeçalho -->
         <div class="header">
-            <h1>Gerenciador de Voluntários</h1>
+            <h1>Voluntários</h1>
             <div class="icons">
-                <span class="icon" onclick="notificacao()">
-                    <img src="notificacao.png" alt="Notificações">
-                </span>
-                <span class="icon" onclick="configuracao()">
-                    <img src="configuracao.png" alt="Configurações">
-                </span>
                 <span class="icon">
-                    <img src="perfil.png" alt="Perfil do Usuário">
+                    <img src="../images/perfil-logo.png" alt="Perfil do Usuário">
                 </span>
             </div>
         </div>
@@ -51,7 +50,12 @@
             <tbody id="voluntarios">
                 <tr>
                     <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
-                    <td>Renan M</td>
+                    <td class="user-name">
+                        <div class="user-info">
+                            <div class="avatar"></div>
+                            <span><strong>Renan</strong> M</span>
+                        </div>
+                    </td>
                     <td>#2211220</td>
                     <td>01/08/2024</td>
                     <td>renanm@gmail.com</td>
@@ -61,6 +65,24 @@
                         <button onclick="email('Renan M')">✉️</button>
                     </td>
                     <td><button onclick="opcoes('Renan M')">...</button></td>
+                </tr>
+                <tr>
+                    <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
+                    <td class="user-name">
+                        <div class="user-info">
+                            <div class="avatar"></div>
+                            <span><strong>Leonardo</strong> F</span>
+                        </div>
+                    </td>
+                    <td>#2211220</td>
+                    <td>01/08/2024</td>
+                    <td>leonardof@gmail.com</td>
+                    <td>Cornélio Procópio</td>
+                    <td class="actions">
+                        <button onclick="contato('Leonardo F')">📞</button>
+                        <button onclick="email('Leonardo F')">✉️</button>
+                    </td>
+                    <td><button onclick="opcoes('Leonardo F')">...</button></td>
                 </tr>
                 <!-- Outras linhas podem ser adicionadas aqui -->
             </tbody>

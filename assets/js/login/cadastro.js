@@ -42,3 +42,24 @@ document.addEventListener("DOMContentLoaded", () => {
         form1.style.display = 'block';
     });
 });
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    // Aqui você pode adicionar a lógica para enviar os dados do formulário para o servidor
+    // Após o envio bem-sucedido, redirecione para a página de login
+    window.location.href = 'login.html';
+});
