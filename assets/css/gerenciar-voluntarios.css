@@ -1,94 +1,173 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7fc;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #F2F2FC;
 }
 
 .container {
-    width: calc(100% - 260px); /* Ajuste para acomodar o menu lateral */
-    margin: 20px auto;
-    padding-left: 260px; /* Espaço para o menu lateral */
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    flex-direction: column;
+    margin-left: 300px;
 }
 
 .menu-lateral {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 240px;
-    height: 100%;
-    background-color: #2e5bff;
-    padding: 20px 10px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #007BCC;
+    padding: 20px;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
 }
 
 .menu-lateral h2 {
-    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.logo-ellp {
+    width: 105%;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 .menu-item {
-    margin: 15px 0;
-    padding: 10px;
+    margin-bottom: 30px;
     color: white;
     text-decoration: none;
+    font-size: 18px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 15px;
+    border-radius: 25px;
     cursor: pointer;
-    border-radius: 5px;
+    clip-path: polygon(0 0, 92.5% 0, 92.5% 100%, 0 100%);
+}
+.menu-item:hover, .menu-item.ativo {
+    background-color: #ddd;
+    font-weight: bold;
 }
 
-.menu-item:hover {
-    background-color: #1d3fa7;
+.menu-item.active {
+    background-color: #ffffff;
+    color: #00004d;
 }
-
+.menu-item.ativo {
+    font-size: 18px; 
+    padding: 12px; 
+    padding-left: 20px;
+    margin-left: -20px; 
+    width: calc(98% + 65px); 
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #e3e7fe;
-    border-radius: 8px;
+    margin-bottom: 30px;
     position: relative;
 }
 
 .header h1 {
-    margin: 0;
-    font-size: 24px;
+    font-size: 44px;
+    color: #00004D;
+    margin-bottom: 0px;
+    margin-left: 30px;
 }
 
-.header .icons {
+.icons {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-.header .icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.icon {
+    position: relative;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.header .icon:hover {
-    background-color: #e0e4ff;
 }
 
 .icon img {
-    width: 20px;
-    height: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgba(211, 211, 211, 0.477);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para os índices de paginação */
+.profile-pic {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url("../images/logo\ ellp\ vazia.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.username {
+    position: absolute;
+    top: 30px;
+    right: 95px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00004d;
+}
+
+.user-role {
+    position: absolute;
+    top: 52px;
+    right: 95px;
+    font-size: 16px;
+    color: #555;
+}
+
+.table-container {
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+table th {
+    background-color: #007BCC;
+    color: white;
+}
+
+.checkbox-column {
+    width: 40px;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -96,7 +175,7 @@ body {
 }
 
 .pagination button {
-    background-color: #2e5bff;
+    background-color: #007BCC;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -108,8 +187,8 @@ body {
 
 .pagination button.selected {
     background-color: white;
-    color: #2e5bff;
-    border: 2px solid #2e5bff;
+    color: #007BCC;
+    border: 2px solid #007BCC;
 }
 
 .pagination button:hover {
