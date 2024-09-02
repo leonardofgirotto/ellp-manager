@@ -19,7 +19,7 @@ body {
 
 .sidebar-left {
     width: 300px;
-    background-color: #0054D6;
+    background-color: #007BCC;
     padding: 20px;
     color: white;
 }
@@ -40,7 +40,6 @@ nav ul {
 
 nav ul li {
     margin-bottom: 30px;
-   
 }
 
 nav ul li a {
@@ -48,7 +47,23 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: center; 
+}
+
+nav ul li.btn a {
+     margin-left: 38px;
+}
+
+nav ul li.active i{
+    position: relative;
+    right: 11px;
+    font-size: 30px;
+}
+
+nav ul li.btn i{
+    position: relative;
+    right: 15px;
+    font-size: 30px;
 }
 
 nav ul li.active a {
@@ -59,6 +74,8 @@ nav ul li.active a {
     color: #00004d;
     width: 303px;
     clip-path: polygon(0 0, 92.5% 0, 92.5% 100%, 0 100%);
+    padding-left: 32px;
+
 }
 
 .content {
@@ -84,17 +101,21 @@ nav ul li.active a {
 .profile-pic {
     width: 60px;
     height: 60px;
-    background-color: #0054D6;
+    background-color: rgba(211, 211, 211, 0.477);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     position: absolute;
     right: 20px;
     top: 20px;
+    background-image: url("../images/logo\ ellp\ vazia.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .username {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #00004d;
     position: absolute;
     right: 95px;
     top: 30px;
@@ -151,7 +172,7 @@ nav ul li.active a {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 36px;
+    margin-top: 99px;
     margin-right: 100px;
 }
 
@@ -173,24 +194,24 @@ nav ul li.active a {
 
 .termo-adesao button {
     padding: 10px 20px;
-    border: 2px solid #0054D6;
+    border: 2px solid #007BCC;
     background: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    color: #0054D6;
+    color: #007BCC;
     text-align: center;
 }
 
 .sidebar-right {
     width: 315px;
-    background-color: #FAFAFA;
+    background-color: none;
     padding: 20px;
     position: absolute;
     right: 0;
-    top: 120px; /* Adjusted to create space for the header */
-    bottom: 0; /* Adjusted to not take the full height */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    top: 80px; 
+    bottom: 0; 
+    box-shadow: none;
     border-radius: 12px;
 }
 
@@ -199,7 +220,7 @@ nav ul li.active a {
 }
 
 .oficinas-section h2 {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -207,24 +228,47 @@ nav ul li.active a {
 .oficinas-list {
     list-style-type: none;
     margin-bottom: 20px;
+
 }
 
 .oficinas-list li {
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.oficinas-list li#h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #00004D;
+}
+
+.oficinas-list li#cor1{
+border-left: 15px solid #007BCC;
+}
+
+.oficinas-list li#cor2{
+    border-left: 15px solid orange;
+}
+
+.oficinas-list li#cor3{
+    border-left: 15px solid yellow;
+}
+
+.oficinas-list li#cor4{
+    border-left: 15px solid #00004d;
+}
+
 .oficina p {
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 17px;
     color: #555;
 }
 
 .show-more-btn {
-    background-color: #0054D6;
+    background-color: #007BCC;
     color: white;
     padding: 10px 15px;
     border: none;
