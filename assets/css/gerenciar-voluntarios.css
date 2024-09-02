@@ -1,49 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #f7f7fc;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: calc(100% - 260px); /* Ajuste para acomodar o menu lateral */
-    margin: 20px auto;
-    padding-left: 260px; /* Espaço para o menu lateral */
-}
-
-.menu-lateral {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 240px;
-    height: 100%;
-    background-color: #2e5bff;
-    padding: 20px 10px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-.menu-lateral h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.menu-item {
-    margin: 15px 0;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-.menu-item:hover {
-    color: #00004D;
-    background-color: white;
 }
 
 .header {
@@ -79,10 +41,6 @@ body {
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-}
-
-.header .icon:hover {
-    background-color: #e0e4ff;
 }
 
 .icon img {
@@ -155,36 +113,9 @@ table th {
     margin-right: 5px;
     padding: 5px 10px;
     border: none;
-    background-color: #2e5bff;
-    color: white;
+    color: #00004D;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.actions button:hover {
-    background-color: #1d3fa7;
-}
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.pagination button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    background-color: #2e5bff;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.pagination button.selected {
-    background-color: #1d3fa7;
-}
-
-.pagination button:hover {
-    background-color: #3e78ff;
-}

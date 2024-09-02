@@ -15,14 +15,12 @@ main {
     position: relative;
     height: 100vh;
     background-color: blue;
+    display: flex;
 }
 
 section#side-bar-left {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    height: 700px;
+    position: relative;
+    height: 100vh;
     width: 300px;
     background: url('images/side-bar-left.png') no-repeat;
 }
@@ -39,75 +37,46 @@ section#side-bar-left div#botoes-laterais button {
     width: 250px;
     height: 50px;
     margin: 10px;
-    display: flex;
-
+    align-items: center;
     border-radius: 20px;
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.463);
 }
 
-section#side-bar-left div#botoes-laterais button {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-section#side-bar-left div#botoes-laterais button a {
-    text-decoration: none;
-    color: #00004D;
-}
-
 section#side-bar-left div#botoes-laterais button:hover {
     background-color: #00004D;
-}
-
-section#side-bar-left div#botoes-laterais button:hover a {
-    color: white;
-}
-
-section#side-bar-left div#botoes-laterais button:hover i {
-    color: white;
-}
-
-section#side-bar-left div#botoes-laterais button i {
-    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 section#side-bar-left div#botoes-laterais button i:hover {
     color: white;
 }
 
-section#side-bar-left div#botoes-laterais button:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-section#side-bar-left div#botoes-laterais button:hover {
-    transform: scale(1.05);
-}
-
-section#side-bar-left div#botoes-laterais button:hover {
-    transition: all 0.3s ease;
-}
-
-section#side-bar-left div#botoes-laterais button:hover {
-    cursor: pointer;
-}
-
 section#side-bar-left div#botoes-laterais button:active {
-    background-color: #00004D;
+    background-color: #ffffff;
     color: white;
 }
 
 section#conteudo-central {
     background-color: white;
-    position: absolute;
-    top: 0;
-    left: 300px;
-    right: 0;
-    bottom: 0;
-  
-    height: 700px;
-    width: 1235px;
+    flex-grow: 1; /* Para ocupar o restante do espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Para garantir que o iframe não encoste nas bordas */
+}
+
+iframe {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+iframe.active {
+    display: block;
 }

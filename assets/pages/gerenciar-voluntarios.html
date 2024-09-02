@@ -7,23 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link para o CSS externo -->
     <link rel="stylesheet" href="../css/gerenciar-voluntarios.css">
 </head>
 <body>
-    <!-- Menu Lateral -->
-    <div class="menu-lateral">
-        <div class="logo">
-            <img src="../images/ELLP logo horizontal 1.png" alt="ELLP Logo">
-        </div>
-        <div class="menu-item" onclick="mostrarVoluntarios()"><i class="fa-solid fa-user-graduate"></i>Voluntários</div>
-        <div class="menu-item" onclick="mostrarTermo()"><i class="fa-regular fa-envelope"></i>Termo de Adesão</div>
-        <div class="menu-item" onclick="mostrarOficinas()"> <i class="fa-regular fa-calendar"></i>Oficinas</div>
-        <div class="menu-item" onclick="mostrarAtividades()"> <i class="fa-solid fa-chart-line"></i>Atividades</div>
-    </div>
-
     <div class="container">
-        <!-- Cabeçalho -->
         <div class="header">
             <h1>Voluntários</h1>
             <div class="icons">
@@ -32,8 +19,7 @@
                 </span>
             </div>
         </div>
-        <!-- Campo de Busca e Tabela -->
-        <input type="text" id="search" placeholder="Procurar..." onkeyup="filtrarVoluntarios()">
+        <input type="text" id="search" placeholder="Pesquisar" onkeyup="filtrarVoluntarios()">
         <table>
             <thead>
                 <tr>
@@ -41,10 +27,7 @@
                     <th>Nome</th>
                     <th>RA</th>
                     <th>Data</th>
-                    <th>Email</th>
-                    <th>Cidade</th>
-                    <th>Contato</th>
-                    <th>Ações</th>
+                    <th>E-mail</th>
                 </tr>
             </thead>
             <tbody id="voluntarios">
@@ -59,12 +42,9 @@
                     <td>#2211220</td>
                     <td>01/08/2024</td>
                     <td>renanm@gmail.com</td>
-                    <td>Cornélio Procópio</td>
                     <td class="actions">
-                        <button onclick="contato('Renan M')">📞</button>
-                        <button onclick="email('Renan M')">✉️</button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
                     </td>
-                    <td><button onclick="opcoes('Renan M')">...</button></td>
                 </tr>
                 <tr>
                     <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
@@ -77,46 +57,22 @@
                     <td>#2211220</td>
                     <td>01/08/2024</td>
                     <td>leonardof@gmail.com</td>
-                    <td>Cornélio Procópio</td>
                     <td class="actions">
-                        <button onclick="contato('Leonardo F')">📞</button>
-                        <button onclick="email('Leonardo F')">✉️</button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
                     </td>
-                    <td><button onclick="opcoes('Leonardo F')">...</button></td>
                 </tr>
-                <!-- Outras linhas podem ser adicionadas aqui -->
             </tbody>
         </table>
         
-        <!-- Indices de Paginação -->
+        <!-- Indices de Paginação 
         <div class="pagination">
             <button class="selected" onclick="pagina(1)">1</button>
             <button onclick="pagina(2)">2</button>
             <button onclick="pagina(3)">3</button>
-        </div>
+        </div>-->
     </div>
 
     <script>
-        function mostrarVoluntarios() {
-            alert("Exibindo Voluntários");
-        }
-
-        function mostrarTermo() {
-            alert("Exibindo Termo de Adesão");
-        }
-
-        function mostrarOficinas() {
-            alert("Exibindo Oficinas");
-        }
-
-        function mostrarAtividades() {
-            alert("Exibindo Atividades");
-        }
-
-        function novoVoluntario() {
-            alert("Adicione um novo voluntário!");
-        }
-
         function selecionarTodos() {
             const selectAllCheckbox = document.getElementById('selectAll');
             const checkboxes = document.getElementsByClassName('select-item');
@@ -137,32 +93,6 @@
                     row.style.display = 'none';
                 }
             }
-        }
-
-        function contato(nome) {
-            alert("Ligando para " + nome);
-        }
-
-        function email(nome) {
-            alert("Enviando email para " + nome);
-        }
-
-        function opcoes(nome) {
-            alert("Opções para " + nome);
-        }
-
-        function notificacao() {
-            alert("Você tem novas notificações!");
-        }
-
-        function configuracao() {
-            alert("Abrindo configurações do usuário!");
-        }
-
-        function pagina(numero) {
-            const botoes = document.querySelectorAll('.pagination button');
-            botoes.forEach(botao => botao.classList.remove('selected'));
-            botoes[numero - 1].classList.add('selected');
         }
     </script>
 </body>
