@@ -12,10 +12,11 @@ body {
     background-color: #ffffff;
 }
 
-header {
+header { /* titulo atividades*/
     background-color: #ffffff;
     padding: 20px;
     text-align: center;
+    width: 900px;
     position: relative;
 }
 
@@ -88,8 +89,8 @@ main {
     padding: 20px;
 }
 
-table {
-    width: 100%;
+table { /*tabela*/
+    width: 30%;
     border-collapse: collapse;
     /*margin-top: 20px;*/
 }
@@ -132,4 +133,15 @@ input[type="date"] {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
+}
+.sidebar-right { /* menu lateal direita*/
+    width: 20%;
+    background-color: #FAFAFA;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 100px; /* Adjusted to create space for the header */
+    bottom: 0; /* Adjusted to not take the full height */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
 }
