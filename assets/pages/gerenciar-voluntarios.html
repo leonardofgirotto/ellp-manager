@@ -4,77 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Voluntários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/gerenciar-voluntarios.css">
 </head>
 <body>
-    <!-- Menu Lateral -->
-    <div class="menu-lateral">
-        <img src="../images/ELLP logo horizontal 1.png" alt="Logo ELLP" class="logo-ellp">
-        <div class="menu-item ativo" onclick="navigateTo('voluntarios.html')">Voluntários</div>
-        <div class="menu-item" onclick="navigateTo('termo-de-adesao.html')">Termo de Adesão</div>
-        <div class="menu-item" onclick="navigateTo('oficinas.html')">Oficinas</div>
-        <div class="menu-item" onclick="navigateTo('atividades.html')">Atividades</div>
-    </div>
-
-    <!-- Container Principal -->
     <div class="container">
-        <!-- Cabeçalho -->
         <div class="header">
             <h1>Voluntários</h1>
             <div class="icons">
-                <img src="perfil-logo.png" alt="Perfil do Usuário">
+                <span class="icon">
+                    <img src="../images/perfil-logo.png" alt="Perfil do Usuário">
+                </span>
             </div>
         </div>
-
-        <!-- Campo de Busca e Tabela -->
-        <div class="table-container">
-            <input type="text" id="search" placeholder="Procurar..." onkeyup="filtrarVoluntarios()">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="checkbox-column"><input type="checkbox" id="selectAll" onclick="selecionarTodos()"></th>
-                        <th>Nome</th>
-                        <th>RA</th>
-                        <th>Data</th>
-                        <th>Email</th>
-                        <th>Cidade</th>
-                        <th>Contato</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="voluntarios">
-                    <tr>
-                        <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
-                        <td>Renan M</td>
-                        <td>#2211220</td>
-                        <td>01/08/2024</td>
-                        <td>renanm@gmail.com</td>
-                        <td>Cornélio Procópio</td>
-                        <td class="actions">
-                            <button onclick="contato('Renan M')">📞</button>
-                            <button onclick="email('Renan M')">✉️</button>
-                        </td>
-                        <td><button onclick="opcoes('Renan M')">...</button></td>
-                    </tr>
-                    <!-- Outras linhas podem ser adicionadas aqui -->
-                </tbody>
-            </table>
-
-            <!-- Índices de Paginação -->
-            <div class="pagination">
-                <button class="selected" onclick="pagina(1)">1</button>
-                <button onclick="pagina(2)">2</button>
-                <button onclick="pagina(3)">3</button>
-            </div>
-        </div>
+        <input type="text" id="search" placeholder="Pesquisar" onkeyup="filtrarVoluntarios()">
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox-column"><input type="checkbox" id="selectAll" onclick="selecionarTodos()"></th>
+                    <th>Nome</th>
+                    <th>RA</th>
+                    <th>Data</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody id="voluntarios">
+                <tr>
+                    <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
+                    <td class="user-name">
+                        <div class="user-info">
+                            <div class="avatar"></div>
+                            <span><strong>Renan</strong> M</span>
+                        </div>
+                    </td>
+                    <td>#2211220</td>
+                    <td>01/08/2024</td>
+                    <td>renanm@gmail.com</td>
+                    <td class="actions">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="checkbox-column"><input type="checkbox" class="select-item"></td>
+                    <td class="user-name">
+                        <div class="user-info">
+                            <div class="avatar"></div>
+                            <span><strong>Leonardo</strong> F</span>
+                        </div>
+                    </td>
+                    <td>#2211220</td>
+                    <td>01/08/2024</td>
+                    <td>leonardof@gmail.com</td>
+                    <td class="actions">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Indices de Paginação 
+        <div class="pagination">
+            <button class="selected" onclick="pagina(1)">1</button>
+            <button onclick="pagina(2)">2</button>
+            <button onclick="pagina(3)">3</button>
+        </div>-->
     </div>
 
-    <!-- Script JavaScript -->
     <script>
-        function navigateTo(url) {
-            window.location.href = url;
-        }
-
         function selecionarTodos() {
             const selectAllCheckbox = document.getElementById('selectAll');
             const checkboxes = document.getElementsByClassName('select-item');
@@ -95,24 +93,6 @@
                     row.style.display = 'none';
                 }
             }
-        }
-
-        function contato(nome) {
-            alert("Ligando para " + nome);
-        }
-
-        function email(nome) {
-            alert("Enviando email para " + nome);
-        }
-
-        function opcoes(nome) {
-            alert("Opções para " + nome);
-        }
-
-        function pagina(numero) {
-            const botoes = document.querySelectorAll('.pagination button');
-            botoes.forEach(botao => botao.classList.remove('selected'));
-            botoes[numero - 1].classList.add('selected');
         }
     </script>
 </body>

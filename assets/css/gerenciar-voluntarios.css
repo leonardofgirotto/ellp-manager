@@ -1,154 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
 
 body {
-    display: flex;
-    height: 100vh;
-    background-color: #F2F2FC;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7fc;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    position: relative;
-    padding: 20px;
-    flex-direction: column;
-    margin-left: 300px;
-}
-
-.menu-lateral {
-    width: 300px;
-    background-color: #007BCC;
-    padding: 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-
-.menu-lateral h2 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-.logo-ellp {
-    width: 105%;
-    margin-bottom: 20px;
-}
-
-.menu-item {
-    margin-bottom: 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    clip-path: polygon(0 0, 92.5% 0, 92.5% 100%, 0 100%);
-}
-.menu-item:hover, .menu-item.ativo {
-    background-color: #ddd;
-    font-weight: bold;
-}
-
-.menu-item.active {
-    background-color: #ffffff;
-    color: #00004d;
-}
-.menu-item.ativo {
-    font-size: 18px; 
-    padding: 12px; 
-    padding-left: 20px;
-    margin-left: -20px; 
-    width: calc(98% + 65px); 
-}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
     position: relative;
 }
 
 .header h1 {
-    font-size: 44px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
     color: #00004D;
-    margin-bottom: 0px;
-    margin-left: 30px;
 }
 
-.icons {
+.header .icons {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
 }
 
-.icon {
-    position: relative;
+.header .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .icon img {
-    width: 55px;
-    height: 55px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo para a coluna de nomes */
+.user-name {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e4ff;
     border-radius: 50%;
-    background-color: rgba(211, 211, 211, 0.477);
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-pic {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-image: url("../images/logo\ ellp\ vazia.png");
-    background-size: cover;
-    background-position: center;
+.user-info span {
+    font-weight: 400;
 }
 
-.username {
-    position: absolute;
-    top: 30px;
-    right: 95px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #00004d;
+.user-info strong {
+    font-weight: 600;
 }
 
-.user-role {
-    position: absolute;
-    top: 52px;
-    right: 95px;
-    font-size: 16px;
-    color: #555;
-}
-
-.table-container {
-    flex-grow: 1;
-    margin-top: 30px;
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 table th, table td {
+    padding: 15px;
     text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
-    background-color: #007BCC;
-    color: white;
+    background-color: #f3f4f6;
 }
 
 .checkbox-column {
@@ -156,41 +109,13 @@ table th {
     text-align: center;
 }
 
-.actions {
-    display: flex;
-    gap: 10px;
-}
-
 .actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
     border: none;
-    background-color: transparent;
+    color: #00004D;
+    border-radius: 3px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 
-.pagination button {
-    background-color: #007BCC;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.pagination button.selected {
-    background-color: white;
-    color: #007BCC;
-    border: 2px solid #007BCC;
-}
-
-.pagination button:hover {
-    opacity: 0.8;
-}

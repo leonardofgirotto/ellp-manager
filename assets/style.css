@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+}
+
+section#side-bar-left {
+    position: relative;
+    height: 100vh;
+    width: 300px;
+    background: url('images/side-bar-left.png') no-repeat;
+}
+
+div#botoes-laterais {
+    position: relative;
+    top: 150px;
+    left: 10px;
+    width: 300px;
+}
+
+section#side-bar-left div#botoes-laterais button {
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.463);
+}
+
+section#side-bar-left div#botoes-laterais button:hover {
+    background-color: #00004D;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+section#side-bar-left div#botoes-laterais button i:hover {
+    color: white;
+}
+
+section#side-bar-left div#botoes-laterais button:active {
+    background-color: #ffffff;
+    color: white;
+}
+
+section#conteudo-central {
+    background-color: white;
+    flex-grow: 1; /* Para ocupar o restante do espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Para garantir que o iframe não encoste nas bordas */
+}
+
+iframe {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+iframe.active {
+    display: block;
+}

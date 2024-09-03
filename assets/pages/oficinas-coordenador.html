@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELLP Manager - Oficinas</title>
-    <link rel="stylesheet" href="oficinas-coordenador.css">
+    <link rel="stylesheet" href="../css/oficinas-coordenador.css">
 </head>
+
 <body>
     <div class="container">
-        <aside class="sidebar">
-            <div class="logo">
-                <img src="logo.png" alt="ELLP Manager">
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Voluntários</a></li>
-                    <li><a href="#">Termo de Adesão</a></li>
-                    <li class="active"><a href="#">Oficinas</a></li>
-                    <li><a href="#">Atividades</a></li>
-                </ul>
-            </nav>
-        </aside>
         <main class="content">
             <header class="header">
                 <h1>Oficinas</h1>
@@ -59,20 +48,12 @@
                     <div class="day">9</div>
                     <div class="day">10</div>
                     <div class="day">11</div>
-                    <div class="day highlight-orange">
-                        12
-                        <div class="workshop-badge">7+</div>
-                    </div>
                     <div class="day">13</div>
                     <div class="day">14</div>
                     <div class="day">15</div>
                     <div class="day">16</div>
                     <div class="day">17</div>
                     <div class="day">18</div>
-                    <div class="day highlight-purple">
-                        19
-                        <div class="workshop-badge">7+</div>
-                    </div>
                     <div class="day">20</div>
                     <div class="day">21</div>
                     <div class="day">22</div>
@@ -86,54 +67,55 @@
                     <div class="day">30</div>
                 </div>
             </section>
-            <aside class="upcoming-workshops">
-                <h3>Oficinas Próximas</h3>
-                <div class="workshop">
-                    <h4>Oficina 1</h4>
-                    <p>12/08/2024</p>
-                    <p>09:00 - 10:00</p>
-                </div>
-                <div class="workshop">
-                    <h4>Oficina 2</h4>
-                    <p>12/08/2024</p>
-                    <p>09:00 - 10:00</p>
-                </div>
-                <div class="workshop">
-                    <h4>Oficina 3</h4>
-                    <p>12/08/2024</p>
-                    <p>09:00 - 10:00</p>
-                </div>
-                <div class="workshop">
-                    <h4>Oficina 4</h4>
-                    <p>12/08/2024</p>
-                    <p>09:00 - 10:00</p>
-                </div>
-                <button class="show-more">Mostrar mais</button>
-            </aside>
         </main>
     </div>
-    <!-- Adicione isto no final do corpo (antes de </body>) -->
-    <div id="modal-overlay" class="modal-overlay">
-        <div class="modal">
-            <h2>Nova Oficina</h2>
-            <form id="new-workshop-form">
-                <label for="workshop-name">Nome da Oficina:</label>
-                <input type="text" id="workshop-name" required>
 
-                <label for="workshop-date">Data:</label>
-                <input type="date" id="workshop-date" required>
-
-                <label for="workshop-time">Horário:</label>
-                <input type="time" id="workshop-time" required>
-
-                <label for="workshop-duration">Duração (horas):</label>
-                <input type="number" id="workshop-duration" min="1" max="8" required>
-
-                <button type="submit">Adicionar Oficina</button>
-            </form>
-            <button id="close-modal">Fechar</button>
+    <div class="sidebar-right">
+        <div class="oficinas-section">
+            <h2></h2>
+            <ul class="oficinas-list">
+                <li id="h1">
+                    <div>
+                        <p>Oficinas Próximas</p>
+                    </div>
+                <li id="cor1">
+                    <div>
+                        <p><strong>Oficina 1</strong></p>
+                        <p>12/08/2024</p>
+                        <p>09:00 - 10:00</p>
+                        <p>Professor</p>
+                    </div>
+                </li>
+                <li id="cor2">
+                    <div>
+                        <p><strong>Oficina 2</strong></p>
+                        <p>12/08/2024</p>
+                        <p>09:00 - 10:00</p>
+                        <p>Professor</p>
+                    </div>
+                </li>
+                <li id="cor3">
+                    <div>
+                        <p><strong>Oficina 3</strong></p>
+                        <p>12/08/2024</p>
+                        <p>09:00 - 10:00</p>
+                        <p>Professor</p>
+                    </div>
+                </li>
+                <li id="cor4">
+                    <div class="oficina4">
+                        <p><strong>Oficina 4</strong></p>
+                        <p>12/08/2024</p>
+                        <p>09:00 - 10:00</p>
+                        <p>Professor</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="show-more-btn">Mostrar mais</button>
         </div>
+    </div>
     </div>
 
 </body>
+
 </html>

@@ -10,26 +10,15 @@
     <link rel="stylesheet" href="../css/cadastrar-atvidades.css">
 </head>
 <body>
-    <header>
-        <h1>Atividades</h1>
-        <div class="header-right">
-            <div class="icon" id="notificacao" title="Notificação"><i class="fa-regular fa-bell"></i></div>
-            <div class="icon" id="configuracoes" title="Configurações"><i class="fa-solid fa-gear"></i></div>
-            <div class="icon" id="perfil" title="Perfil"><i class="fa-solid fa-user"></i></div>
-        </div>
-    </header>
-    <aside>
-        <div class="logo">
-            <img src="/view/images/ELLP logo horizontal 1.png" alt="Logo ELLP Manager">
-        </div>
-        <ul>
-            <li><a href="#">Voluntários</a></li>
-            <li><a href="#">Termo de Adesão</a></li>
-            <li><a href="#">Oficinas</a></li>
-            <li><a href="#" class="active">Atividades</a></li>
-        </ul>
-    </aside>
     <main>
+        <div class="header">
+            <h1>Atividades</h1>
+            <div class="icons">
+                <span class="icon">
+                    <img src="../images/perfil-logo.png" alt="Perfil do Usuário">
+                </span>
+            </div>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -38,50 +27,7 @@
                     <th>Fim</th>
                     <th colspan="12">Mês</th>
                 </tr>
-                <!-- aqui-->
-                <div class="sidebar-right">
-                    <div class="oficinas-section">
-                        <h2>Oficinas Próximas</h2>
-                        <ul class="oficinas-list">
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 1</strong></p>
-                                    <p>12/08/2024</p>
-                                    <p>09:00 - 10:00</p>
-                                    <p>Professor</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 2</strong></p>
-                                    <p>12/08/2024</p>
-                                    <p>09:00 - 10:00</p>
-                                    <p>Professor</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 3</strong></p>
-                                    <p>12/08/2024</p>
-                                    <p>09:00 - 10:00</p>
-                                    <p>Professor</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="oficina">
-                                    <p><strong>Oficina 4</strong></p>
-                                    <p>12/08/2024</p>
-                                    <p>09:00 - 10:00</p>
-                                    <p>Professor</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="show-more-btn">Mostrar mais</button>
-                    </div>
-                </div>
             </div>
-                <!-- aqui-->
-
                 <tr>
                     <th></th>
                     <th><input type="date" id="inicio"></th>
@@ -115,15 +61,13 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
-                        <!--<div class="periodo">
-                            <label for="inicio">Início:</label>
-                            <input type="date" id="inicio" class="input-data">
-                            <label for="fim">Fim:</label>
-                            <input type="date" id="fim" class="input-data">
-                        </div>-->
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                 </tr>
                 <tr>
                     <td>2</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
@@ -151,9 +95,13 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                 </tr>
                 <tr>
                     <td>4</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
@@ -181,9 +129,13 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                 </tr>
                 <tr>
                     <td>6</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
@@ -211,9 +163,13 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                 </tr>
                 <tr>
                     <td>8</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
@@ -241,9 +197,13 @@
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                 </tr>
                 <tr>
                     <td>10</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
