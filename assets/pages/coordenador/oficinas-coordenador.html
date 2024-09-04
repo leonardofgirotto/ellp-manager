@@ -9,113 +9,104 @@
 </head>
 
 <body>
-    <div class="container">
-        <main class="content">
-            <header class="header">
-                <h1>Oficinas</h1>
-                <div class="search">
-                    <input type="text" placeholder="Procurar">
-                </div>
-                <div class="user-info">
-                    <span>Antonio</span>
-                    <div class="user-avatar"></div>
-                </div>
-            </header>
-            <section class="calendar-section">
-                <div class="calendar-header">
-                    <h2>Calendário</h2>
-                    <div class="calendar-controls">
-                        <select name="month">
-                            <option value="Augusto">Agosto</option>
-                        </select>
-                        <select name="year">
-                            <option value="2024">2024</option>
-                        </select>
-                        <button class="new-workshop">+ Nova Oficina</button>
-                    </div>
-                </div>
-                <div class="calendar">
-                    <!-- Calendar grid with days -->
-                    <div class="day empty"></div>
-                    <div class="day">1</div>
-                    <div class="day">2</div>
-                    <div class="day">3</div>
-                    <div class="day">4</div>
-                    <div class="day">5</div>
-                    <div class="day">6</div>
-                    <div class="day">7</div>
-                    <div class="day">8</div>
-                    <div class="day">9</div>
-                    <div class="day">10</div>
-                    <div class="day">11</div>
-                    <div class="day">13</div>
-                    <div class="day">14</div>
-                    <div class="day">15</div>
-                    <div class="day">16</div>
-                    <div class="day">17</div>
-                    <div class="day">18</div>
-                    <div class="day">20</div>
-                    <div class="day">21</div>
-                    <div class="day">22</div>
-                    <div class="day">23</div>
-                    <div class="day">24</div>
-                    <div class="day">25</div>
-                    <div class="day">26</div>
-                    <div class="day">27</div>
-                    <div class="day">28</div>
-                    <div class="day">29</div>
-                    <div class="day">30</div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <div class="sidebar-right">
-        <div class="oficinas-section">
-            <h2></h2>
-            <ul class="oficinas-list">
-                <li id="h1">
-                    <div>
-                        <p>Oficinas Próximas</p>
-                    </div>
-                <li id="cor1">
-                    <div>
-                        <p><strong>Oficina 1</strong></p>
-                        <p>12/08/2024</p>
-                        <p>09:00 - 10:00</p>
-                        <p>Professor</p>
-                    </div>
-                </li>
-                <li id="cor2">
-                    <div>
-                        <p><strong>Oficina 2</strong></p>
-                        <p>12/08/2024</p>
-                        <p>09:00 - 10:00</p>
-                        <p>Professor</p>
-                    </div>
-                </li>
-                <li id="cor3">
-                    <div>
-                        <p><strong>Oficina 3</strong></p>
-                        <p>12/08/2024</p>
-                        <p>09:00 - 10:00</p>
-                        <p>Professor</p>
-                    </div>
-                </li>
-                <li id="cor4">
-                    <div class="oficina4">
-                        <p><strong>Oficina 4</strong></p>
-                        <p>12/08/2024</p>
-                        <p>09:00 - 10:00</p>
-                        <p>Professor</p>
-                    </div>
-                </li>
-            </ul>
-            <button class="show-more-btn">Mostrar mais</button>
+    <div class="header">
+        <h1>Oficinas</h1>
+        <div class="icons">
+            <div class="info">
+                <p class="name">Antônio</p>
+                <p class="user">Coordenador</p>
+            </div>
+            <span class="icon">
+                <img src="../images/perfil-logo.png" alt="Perfil do Usuário">
+            </span>
         </div>
     </div>
+    <div class="container">
+        <section class="calendar-section">
+            <div class="calendar-header">
+                <div class="calendar-controls">
+                    <select name="month">
+                        <option value="Augusto">Agosto</option>
+                    </select>
+                    <select name="year">
+                        <option value="2024">2024</option>
+                    </select>
+                    <button class="new-workshop">+ Nova Oficina</button>
+                </div>
+            </div>
+            <div class="calendar">
+                <!-- Calendar grid with days -->
+                <div class="day empty"></div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+            </div>
+        </section>
+        <div class="sidebar-right">
+            <div class="oficinas-section">
+                <h2></h2>
+                <ul class="oficinas-list">
+                    <li id="cor1">
+                        <div>
+                            <p><strong>Oficina 1</strong></p>
+                            <p>12/08/2024</p>
+                            <p>09:00 - 10:00</p>
+                            <p>Professor</p>
+                        </div>
+                    </li>
+                    <li id="cor2">
+                        <div>
+                            <p><strong>Oficina 2</strong></p>
+                            <p>12/08/2024</p>
+                            <p>09:00 - 10:00</p>
+                            <p>Professor</p>
+                        </div>
+                    </li>
+                    <li id="cor3">
+                        <div>
+                            <p><strong>Oficina 3</strong></p>
+                            <p>12/08/2024</p>
+                            <p>09:00 - 10:00</p>
+                            <p>Professor</p>
+                        </div>
+                    </li>
+                    <li id="cor4">
+                        <div class="oficina4">
+                            <p><strong>Oficina 4</strong></p>
+                            <p>12/08/2024</p>
+                            <p>09:00 - 10:00</p>
+                            <p>Professor</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>

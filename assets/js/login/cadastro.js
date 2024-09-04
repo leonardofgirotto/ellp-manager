@@ -41,38 +41,60 @@ document.addEventListener("DOMContentLoaded", () => {
         form2.style.display = 'none';
         form1.style.display = 'block';
     });
+});
 
-    // Evento de envio do formulário
-    document.getElementById('register-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+// Função para salvar os dados no Local Storage
+function saveData() {
+    const isVoluntario = document.querySelector(".tablink.active").textContent.includes("Voluntário");
 
-        let formData = new FormData(this); // Captura os dados do formulário
-        let data = {};
+    if (isVoluntario) {
+        // Dados do formulário de voluntário
+        const voluntarioData = {
+            nome: document.getElementById('nome').value,
+            nascimento: document.getElementById('nascimento').value,
+            cpf: document.getElementById('cpf').value,
+            nacionalidade: document.getElementById('nacionalidade').value,
+            endereco: document.getElementById('endereco').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('istate').value,
+            ra: document.getElementById('ra').value,
+            curso: document.getElementById('curso').value,
+            periodo: document.getElementById('periodo').value,
+            telefone: document.getElementById('telefone').value,
+            email: document.getElementById('email').value,
+            senha: document.getElementById('senha').value,
+            estudante: document.querySelector('input[name="status"]:checked').value
+        };
 
-        // Converte os dados para um objeto JSON
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+        localStorage.setItem('voluntarioData', JSON.stringify(voluntarioData));
+    } else {
+        // Dados do formulário de coordenador
+        const coordenadorData = {
+            nome: document.getElementById('nome-coordenador').value,
+            cpf: document.getElementById('cpf-coordenador').value,
+            departamento: document.getElementById('departamento-coordenador').value,
+            telefone: document.getElementById('telefone-coordenador').value,
+            email: document.getElementById('email-coordenador').value,
+            senha: document.getElementById('senha-coordenador').value
+        };
 
-        // Envia os dados para o servidor usando fetch
-        fetch('/php/cadastrar.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                alert('Cadastro realizado com sucesso!');
-                window.location.href = 'login.html'; // Redireciona para a página de login após o sucesso
-            } else {
-                alert('Erro ao cadastrar: ' + data.message);
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-    });
+        localStorage.setItem('coordenadorData', JSON.stringify(coordenadorData));
+    }
+}
+
+// Adicionar eventos de submissão para salvar os dados
+document.getElementById('form-1').addEventListener('submit', (event) => {
+    event.preventDefault(); // Impede o envio do formulário
+    // Apenas exibe a próxima parte do formulário sem salvar
+    document.querySelector('#voluntario button[type="submit"]').click();
+});
+
+document.getElementById('form-2').addEventListener('submit', (event) => {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Salvar os dados do formulário
+    saveData();
+
+    // Redirecionar para a página de login após salvar
+    window.location.href = 'login.html';
 });
