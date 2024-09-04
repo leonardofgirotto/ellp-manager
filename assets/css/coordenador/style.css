@@ -22,7 +22,7 @@ section#side-bar-left {
     position: relative;
     height: 100vh;
     width: 300px;
-    background: url('images/side-bar-left.png') no-repeat;
+    background: url('../../images/side-bar-left.png') no-repeat;
 }
 
 div#botoes-laterais {

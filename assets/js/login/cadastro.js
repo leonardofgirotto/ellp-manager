@@ -41,25 +41,38 @@ document.addEventListener("DOMContentLoaded", () => {
         form2.style.display = 'none';
         form1.style.display = 'block';
     });
-});
 
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+    // Evento de envio do formulário
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
 
-document.getElementById('register-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário para o servidor
-    // Após o envio bem-sucedido, redirecione para a página de login
-    window.location.href = 'login.html';
+        let formData = new FormData(this); // Captura os dados do formulário
+        let data = {};
+
+        // Converte os dados para um objeto JSON
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // Envia os dados para o servidor usando fetch
+        fetch('/php/cadastrar.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'login.html'; // Redireciona para a página de login após o sucesso
+            } else {
+                alert('Erro ao cadastrar: ' + data.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
 });
