@@ -43,23 +43,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+// Função para salvar os dados no Local Storage
+function saveData() {
+    const isVoluntario = document.querySelector(".tablink.active").textContent.includes("Voluntário");
+
+    if (isVoluntario) {
+        // Dados do formulário de voluntário
+        const voluntarioData = {
+            nome: document.getElementById('nome').value,
+            nascimento: document.getElementById('nascimento').value,
+            cpf: document.getElementById('cpf').value,
+            nacionalidade: document.getElementById('nacionalidade').value,
+            endereco: document.getElementById('endereco').value,
+            cidade: document.getElementById('cidade').value,
+            estado: document.getElementById('istate').value,
+            ra: document.getElementById('ra').value,
+            curso: document.getElementById('curso').value,
+            periodo: document.getElementById('periodo').value,
+            telefone: document.getElementById('telefone').value,
+            email: document.getElementById('email').value,
+            senha: document.getElementById('senha').value,
+            estudante: document.querySelector('input[name="status"]:checked').value
+        };
+
+        localStorage.setItem('voluntarioData', JSON.stringify(voluntarioData));
+    } else {
+        // Dados do formulário de coordenador
+        const coordenadorData = {
+            nome: document.getElementById('nome-coordenador').value,
+            cpf: document.getElementById('cpf-coordenador').value,
+            departamento: document.getElementById('departamento-coordenador').value,
+            telefone: document.getElementById('telefone-coordenador').value,
+            email: document.getElementById('email-coordenador').value,
+            senha: document.getElementById('senha-coordenador').value
+        };
+
+        localStorage.setItem('coordenadorData', JSON.stringify(coordenadorData));
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
 }
 
-document.getElementById('register-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário para o servidor
-    // Após o envio bem-sucedido, redirecione para a página de login
+// Adicionar eventos de submissão para salvar os dados
+document.getElementById('form-1').addEventListener('submit', (event) => {
+    event.preventDefault(); // Impede o envio do formulário
+    // Apenas exibe a próxima parte do formulário sem salvar
+    document.querySelector('#voluntario button[type="submit"]').click();
+});
+
+document.getElementById('form-2').addEventListener('submit', (event) => {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Salvar os dados do formulário
+    saveData();
+
+    // Redirecionar para a página de login após salvar
     window.location.href = 'login.html';
 });
