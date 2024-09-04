@@ -3,7 +3,6 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: #f7f7fc;
     margin: 0;
     padding: 0;
 }
@@ -31,60 +30,40 @@ body {
 }
 
 .header .icon {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
 .icon img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
-/* Estilo para a coluna de nomes */
-.user-name {
-    display: flex;
-    align-items: center;
-    padding: 10px;
+.name{
+    font-size: 14px;
+    font-weight: 700;
+    color: #00004D;
+    margin: 0;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #e0e4ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.user-info span {
-    font-weight: 400;
-}
-
-.user-info strong {
-    font-weight: 600;
+.user{
+    font-size: 12px;
+    color: #00004D;
+    margin: 0;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 20%;
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     box-sizing: border-box;
 }
 
@@ -100,10 +79,6 @@ table th, table td {
     border-bottom: 1px solid #ddd;
 }
 
-table th {
-    background-color: #f3f4f6;
-}
-
 .checkbox-column {
     width: 40px;
     text-align: center;
@@ -116,6 +91,7 @@ table th {
     color: #00004D;
     border-radius: 3px;
     cursor: pointer;
+    background-color: #ffffff;
 }
 
 
